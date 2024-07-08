@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aaravind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="title">Aaravind<span>.</span></li>
+        <li>
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container home">
+      <div id="#" class="landing-text">
+        <p>Software Developer</p>
+        <h1>Hi, I'm <span>Aaravind</span></h1>
+        <p>
+          I am a final-year Computer Science student passionate about web
+          development.I am eager to tackle real-world challenges and grow as a
+          developer.
+        </p>
+        <div id="socials-container" class="socials">
+          <button>Download CV</button>
+          <a href="https://github.com/nm-aaravind">
+            <img class="socials" src="assets/github-svgrepo-com.png"></img>
+          </a>
+          <a href="https://www.linkedin.com/in/aaravind-nm/">
+            <img class="socials linkedin" src="assets/linkedin.svg"></img>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="container about">
+      <div class="about-text">
+        <h1>About me</h1>
+        <div class="about-content">
+          <div class="tabs-container">
+            <div class="tabs active-tab">Skills</div>
+            <div class="tabs">Education</div>
+            <div class="tabs">Experience</div>
+          </div>
+          <hr />
+          <div>
+            <div class="tab-content active-tab-content skills">
+              <ol>
+                <li>C++</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>React</li>
+                <li>Mongo</li>
+                <li>SQL</li>
+                <li>Tensorflow</li>
+              </ol>
+            </div>
+            <div class="tab-content education">
+              <ol>
+                <li>
+                  <p class="education-degree">
+                    B.Tech CSE(spl. Artificial Intelligence and Data Science)
+                  </p>
+                  <p class="education-uni">CGPA: <span>9.16</span></p>
+                  <p class="education-yr">SASTRA University, 2021-present</p>
+                </li>
+                <li>
+                  <p class="education-degree">Class XII</p>
+                  <p class="education-uni">Percentage: <span>95.4</span></p>
+                  <p class="education-yr">Chinmaya Vidyalaya, 2021</p>
+                </li>
+              </ol>
+            </div>
+            <div class="tab-content experience">
+              <ol>
+                <li>
+                  <p class="experience-role">Backend Developer Intern</p>
+                  <p class="experience-ins">
+                    Cholamandalam Investments and Finance
+                  </p>
+                  <p class="experience-desc">
+                    Worked on creating an API on Nodejs and MongoDB, that allows
+                    clients to borrow money by mortgaging their shares and track
+                    the excess/shortfall of their stock holdings.
+                    <br />
+                    Worked on validating requests and implementing cron jobs for
+                    existing API
+                  </p>
+                  <p class="experience-yr">June 2023</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="projects-container" id="projects">
+      <h1>Projects</h1>
+      <div class="projects-row">
+        <div class="project project-1">
+          <div class="project-card-content">
+            <h2>Flight Booking API</h2>
+            <p>
+              Developed a backend system for flight booking system as microservice architecture on Node.js, Express.js and MySQL
+            </p>
+            <a href="https://github.com/nm-aaravind/Flight-API">
+                <img src="assets/github-svgrepo-com.png"></img>
+            </a>
+          </div>
+        </div>
+        <div class="project project-2">
+            <div class="project-card-content">
+                <h2>Hotel Booking App</h2>
+                <p>
+                  Developed a full stack app for booking booking hotels using MERN stack
+                </p>
+                <a class="text" href="https://hotel-f.vercel.app">
+                    Visit site
+                </a>
+                <a href="https://github.com/nm-aaravind/hotel">
+                    <img src="assets/github-svgrepo-com.png"></img>
+                </a>
+              </div>
+        </div>
+        <div class="project project-3">
+          <!-- <img src="assets/flight.jpg" alt=""> -->
+          <div class="project-card-content">
+            <h2>Gesture Detection Using Deep Learning</h2>
+            <p>
+              Developed a robust model by combining Convolutional Neural Network (CNN) with classic feature extraction methods like ORB and Gabor filter.</p>
+            <a href="https://github.com/nm-aaravind/hotel">
+                <img src="assets/github-svgrepo-com.png"></img>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var tabs = document.querySelectorAll(".tabs");
+    var tabContents = document.querySelectorAll(".tab-content");
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((tab) => {
+          tab.classList.remove("active-tab");
+        });
+        tabContents.forEach((tabContent) => {
+          tabContent.classList.remove("active-tab-content");
+        });
+        tab.classList.add("active-tab");
+        tabContents[index].classList.add("active-tab-content");
+      });
+    });
+  </script>
+</html>
